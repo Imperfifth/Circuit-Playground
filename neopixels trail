@@ -1,0 +1,12 @@
+import time
+import board
+import neopixel
+
+pixels = neopixel.NeoPixel(board.NEOPIXEL, 4)
+
+while True:
+    for i in enumerate(pixels):
+        pixels[i]=(255, 0, 0)
+        time.sleep(0.5)
+        pixels.fill((0, 0, 0))
+        time.sleep(0.5)
